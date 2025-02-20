@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar {
+    background: #1E3A8A;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1E3A8A, #0EA5E9);
+    color: white;
+    text-align: center;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+footer {
+    padding: 20px;
+    background: #1E3A8A;
+    color: white;
+}
+
+.dark-mode {
+    background: #1F2937;
+    color: #E5E7EB;
+}
+
+.dark-mode .navbar {
+    background: #0EA5E9;
+}
+
+.dark-mode .hero {
+    background: linear-gradient(135deg, #0EA5E9, #1E3A8A);
+}
+
+.dark-mode footer {
+    background: #0EA5E9;
+}
