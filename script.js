@@ -18,4 +18,27 @@ document.addEventListener("DOMContentLoaded", () => {
             themeToggle.textContent = "🌙";
         }
     });
+
+    // Navbar Scroll Effect
+    window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    // Fade-in Sections on Scroll
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    fadeElements.forEach((el) => observer.observe(el));
 });
